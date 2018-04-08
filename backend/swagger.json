@@ -1,0 +1,215 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Almundo API",
+        "description": "Servicios REST para la aplicación de almundo hecha en React",
+        "version": "1.0.0",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact":{
+            "email": "mtorre4580@outloook.com"
+        },
+        "license":{
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "tags":[
+        {
+            "name": "Hotels",
+            "description": "Servicios hoteles"
+        }
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "host": "localhost:3001",
+    "basePath": "/api",
+    "paths": {
+        "/hotels/all": {
+            "get": {
+                "summary": "Obtiene todos los hoteles disponibles",
+                "description": "Permite consultar los hoteles que se encuentran disponibles",
+                "x-swagger-router-controller": "hotelController",
+                "operationId": "get",
+                "tags": ["Hotels"],
+                "responses": {
+                    "200": {
+                        "description": "Operación exitosa",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/hotel"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Error interno del servidor"
+                    }
+                }
+            }
+        },
+        "/hotels":{
+            "get":{
+                "summary": "Filtra los hoteles por distintos parámetros",
+                "description": "Permite consultar los hoteles que se encuentran disponibles filtrando por nombre,precio,estrellas",
+                "x-swagger-router-controller": "hotelController",
+                "operationId": "get",
+                "parameters": [
+                    {
+                      "name": "name",
+                      "in": "query",
+                      "description": "Nombre del hotel",
+                      "required": false,
+                      "type": "string"
+                    },
+                    {
+                      "name": "stars",
+                      "in": "query",
+                      "description": "Estrellas del hotel",
+                      "required": false,
+                      "type": "array",
+                      "items":{
+                          "type": "string"
+                      }
+                    }
+                ],
+                "tags": ["Hotels"],
+                "responses": {
+                    "200": {
+                        "description": "Operación exitosa",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/hotel"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Error interno del servidor"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Permite dar de alta un nuevo hotel",
+                "description": "Guarda un hotel nuevo",
+                "operationId": "post",
+                "tags": ["Hotels"],
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "parameters": [
+                  {
+                    "in": "body",
+                    "name": "Request",
+                    "description": "Hotel a guardar",
+                    "required": true,
+                    "schema": {
+                      "$ref": "#/definitions/hotel"
+                    }
+                  }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación exitosa",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "500": {
+                        "description": "Error interno del servidor"
+                    }
+                }
+            }
+        },
+        "/hotels/{id}":{
+            "delete": {
+                "tags": ["Hotels"],
+                "summary": "Permite eliminar un hotel por el id del mismo",
+                "description": "Elimina el hotel por el id recibido...",
+                "operationId": "del",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                      "name": "id",
+                      "in": "path",
+                      "description": "ID del hotel a eliminar",
+                      "required": true,
+                      "type": "integer",
+                      "minimum": 1,
+                      "format": "int64"
+                    }
+                  ],
+                "responses": {
+                    "200": {
+                        "description": "Operación exitosa",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "500": {
+                        "description": "Error interno del servidor"
+                    }
+                }
+            },
+            "put": {
+                "tags": ["Hotels"],
+                "summary": "Permite actualizar la información de un hotel",
+                "description": "Actualiza el hotel por el id del mismo...",
+                "operationId": "update",
+                "produces": ["application/json"],
+                "parameters": [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "description": "ID del hotel a modificar",
+                    "required": true,
+                    "type": "integer",
+                    "minimum": 1,
+                    "format": "int64"
+                  },
+                  {
+                    "in": "body",
+                    "name": "body",
+                    "description": "Request datos actualizar",
+                    "required": true,
+                    "schema": {
+                      "$ref": "#/definitions/hotel"
+                    }
+                  }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación exitosa",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "500": {
+                        "description": "Error interno del servidor"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "hotel": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "stars": {
+                    "type": "number"
+                },
+                "price": {
+                    "type": "number"
+                },
+                "image":{
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
