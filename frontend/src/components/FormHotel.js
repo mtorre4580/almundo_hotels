@@ -19,7 +19,7 @@ const FormHotel = ({handleSubmit}) => (
             <div className='form-group'>
                 <div className='form-check'>
                     <Field id='allStars' name='allStars' component='input' type='checkbox' className='form-check-input' />
-                    <label className='d-flex' htmlFor='allStars' name='allStars' className='form-check-label'>Todas las estrellas</label>
+                    <label htmlFor='allStars' name='allStars' className='form-check-label d-flex'>Todas las estrellas</label>
                 </div>
                 <div className='form-check'>
                     <Field id='four' name='four' component='input' type='checkbox' className='form-check-input' />
