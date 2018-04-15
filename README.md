@@ -4,21 +4,21 @@
 
 App en React
 
-Devtools
+  # Devtools
 
-<div style="text-align:center;margin:auto">
-  <img src ="devtools.png" />
-</div>
+  <div style="text-align:center;margin:auto">
+    <img src ="devtools.png" />
+  </div>
 
-Storybook
+  # Storybook
 
-<div style="text-align:center;margin:auto">
-  <img src ="story_book_components.png" />
-</div>
+  <div style="text-align:center;margin:auto">
+    <img src ="story_book_components.png" />
+  </div>
 
-<div style="text-align:center;margin:auto">
-  <img src ="story_book_detail_code.png" />
-</div>
+  <div style="text-align:center;margin:auto">
+    <img src ="story_book_detail_code.png" />
+  </div>
 
 # Backend
 
