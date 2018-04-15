@@ -22,6 +22,12 @@ App en React
 
 # Backend
 
+  # Swagger
+  
+    <div style="text-align:center;margin:auto">
+      <img src ="swagger.png" />
+    </div>
+  
 Backend en Node.js
 
 Se encuentran los readme de cada proyecto.
