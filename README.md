@@ -24,9 +24,9 @@ App en React
 
   # Swagger
   
-    <div style="text-align:center;margin:auto">
-      <img src ="swagger.png" />
-    </div>
+  <div style="text-align:center;margin:auto">
+    <img src ="swagger.png" />
+  </div>
   
 Backend en Node.js
 
