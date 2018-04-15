@@ -6,8 +6,11 @@ const Button = ({children,onClick,type}) => (
 );
 
 Button.propTypes = {
+    /** Texto a mostrar */
     children: PropTypes.string,
+    /** Callback a ejecutar el evento onClick */
     onClick: PropTypes.func,
+    /** Tipo de botón */
     type: PropTypes.string
 }
 

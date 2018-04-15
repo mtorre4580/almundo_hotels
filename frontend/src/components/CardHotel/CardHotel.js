@@ -74,6 +74,7 @@ const PriceHotel = styled.p`
 `;
 
 CardHotel.propTypes = {
+    /** Hotel Object */
     hotel: PropTypes.shape({
         id: PropTypes.string,
         stars: PropTypes.number,
@@ -81,6 +82,7 @@ CardHotel.propTypes = {
         image: PropTypes.string,
         amenities: PropTypes.arrayOf(PropTypes.string)
     }).isRequired,
+    /** Callback onClick para ir al detalle */
     onClick: PropTypes.func
 }
 

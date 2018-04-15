@@ -11,7 +11,8 @@ const StarsHotel = ({stars}) => {
 }
 
 StarsHotel.propTypes = {
-    stars: PropTypes.number
+    /** Cantidad de estrellas a mostrar */
+    stars: PropTypes.number.isRequired
 }
 
 export default StarsHotel;

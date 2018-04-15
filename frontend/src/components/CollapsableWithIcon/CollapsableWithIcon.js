@@ -19,9 +19,13 @@ const CollapsableWithIcon = ({title,icon,id,children}) => (
 export default CollapsableWithIcon;
 
 CollapsableWithIcon.propTypes = {
+    /** Título del collapsable */
     title: PropTypes.string.isRequired,
+    /** Ícono a mostrar del collapsable */
     icon: PropTypes.string.isRequired,
+    /** Id para referenciar el contenido collapsado */
     id: PropTypes.string.isRequired,
+    /** Contenido a collapsar */
     children: PropTypes.object
 }
 

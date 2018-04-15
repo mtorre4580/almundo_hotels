@@ -19,7 +19,9 @@ const ButtonToggle = styled.a`
 `;
 
 Collapsable.propTypes = {
+    /** Título del collapsable */
     title: PropTypes.string.isRequired,
+    /** Contenido a collapsar , elemento... */
     children: PropTypes.element
 }
 

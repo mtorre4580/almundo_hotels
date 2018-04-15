@@ -9,6 +9,7 @@ const AmenitiesHotel = ({amenities}) => (
 );
 
 AmenitiesHotel.propTypes = {
+    /** Array de string con las comodidades del hotel */
     amenities: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
