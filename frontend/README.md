@@ -16,6 +16,12 @@ Esta configurado para que tome del package.json la url de la API Rest
 modificarla en caso de levantar el servidor de node.js en otro puerto que no sea el 3001,
 se agrega el proxy, para no tener problema de CORS
 
+# Documentación de componentes
+
+Se utilizó storybook https://storybook.js.org , para documentar los componentes que posee la aplicación.
+Para utilizarla , correr el comando npm run storybook
+Se puede acceder via http://localhost:9009
+
 # Resolución
 Se utilizo el siguiente stack de tecnologías, librerias, middlewares para el mismo
 
@@ -32,6 +38,7 @@ Se utilizo el siguiente stack de tecnologías, librerias, middlewares para el mi
     Boostrap 4
     Webpack
     ES6
+    Storybook
 
 # Estructura
 Actions: Contiene las acciones a ejecutar
