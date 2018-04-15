@@ -1,9 +1,9 @@
 import React from 'react';
 import { Field } from 'redux-form';
 import PropTypes from 'prop-types';
-import StarsHotel from './StarsHotel';
-import Button from './Button';
-import CollapsableWithIcon from './CollapsableWithIcon';
+import StarsHotel from '../StarsHotel/StarsHotel';
+import Button from '../Button/Button';
+import CollapsableWithIcon from '../CollapsableWithIcon/CollapsableWithIcon';
 
 const FormHotel = ({handleSubmit}) => (
     <form className='container py-1' onSubmit={handleSubmit}>

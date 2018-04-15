@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Collapsable from './Collapsable';
-import FormHotel from './FormHotel';
+import Collapsable from '../Collapsable/Collapsable';
+import FormHotel from '../FormHotel/FormHotel';
 
 const Filter = ({handleSubmit}) => (
     <Fragment>

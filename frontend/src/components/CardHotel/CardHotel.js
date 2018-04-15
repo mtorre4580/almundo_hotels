@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Button from './Button';
-import AmenitiesHotel from './AmenitiesHotel';
-import StarsHotel from './StarsHotel';
+import Button from '../Button/Button';
+import AmenitiesHotel from '../AmenitiesHotel/AmenitiesHotel';
+import StarsHotel from '../StarsHotel/StarsHotel';
 
 const CardHotel = ({hotel,onClick}) => (
     <Article className='card'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Hotel from '../containers/HotelsContainer';
-import NotFound from '../components/NotFound';
+import Hotel from '../../containers/HotelsContainer';
+import NotFound from '../../components/NotFound/NotFound';
 
 const Main = () => (
     <main role='main' style={{backgroundColor:"#EEEEEE"}}>

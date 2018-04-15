@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 
 const Header = ({title,url}) => (
     <Navbar className='navbar'>

@@ -23,6 +23,8 @@ Se utilizo el siguiente stack de tecnologías, librerias, middlewares para el mi
     Redux
     Redux-Form
     React Router
+    Redux-Saga
+    Redux-Devtools
     PropTypes
     Styled Components
     Recompose

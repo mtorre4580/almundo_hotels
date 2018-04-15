@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FilterForm from './FilterForm';
-import NotifyError from './NotifyError';
-import HotelList from './HotelList';
+import FilterForm from '../FilterForm/FilterForm';
+import NotifyError from '../NotifyError/NotifyError';
+import HotelList from '../HotelList/HotelList';
 
 const Hotel = ({hotels,loading,error,applyFilter,detail}) => (
     <div className='container'>

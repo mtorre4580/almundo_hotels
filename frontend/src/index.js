@@ -1,21 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import rootReducer from './rootReducer';
-import thunk from 'redux-thunk';
-import createHistory from 'history/createBrowserHistory';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
+import registerServiceWorker from './registerServiceWorker';
+import createHistory from 'history/createBrowserHistory';
+import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
+import rootReducer from './rootReducer';
+import rootSaga from './rootSaga';
 
+const sagaMiddleware = createSagaMiddleware();
 const history = createHistory();
+const historyMiddleware = routerMiddleware(history);
+const middlewares = [sagaMiddleware, thunk, historyMiddleware];
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)));
 
-const composeEnhancers = typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
-
-const enhancer = composeEnhancers(applyMiddleware(thunk, routerMiddleware(history)));
-
-const store = createStore(rootReducer, enhancer);
+sagaMiddleware.run(rootSaga);
 
 registerServiceWorker();
 
@@ -26,4 +29,3 @@ ReactDOM.render(
     </ConnectedRouter>
   </Provider>
 , document.getElementById('root'));
-

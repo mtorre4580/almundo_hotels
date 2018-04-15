@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardHotel from './CardHotel';
-import Loading from './Loading';
+import CardHotel from '../CardHotel/CardHotel';
+import Loading from '../Loading/Loading';
 
 const HotelList = ({hotels,loading,onClick}) => (
     <section>

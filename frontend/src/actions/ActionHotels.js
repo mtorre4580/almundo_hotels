@@ -8,4 +8,6 @@ export default class ActionHotels {
 
     static loadingHotelsError = error => ({type: types.LOADING_HOTELS_ERR, error});
 
+    static filterHotels = filters => ({type: types.FILTER_HOTELS, filters});
+
 }

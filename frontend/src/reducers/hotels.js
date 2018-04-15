@@ -27,6 +27,13 @@ export default (state = initalState, { type, ...payload }) => {
                 loading: false,
                 error: true
             }
+        case types.FILTER_HOTELS:
+            return {
+                ...state,
+                hotels: [],
+                loading: true,
+                error:false
+            }
         default:
             return state
     }
