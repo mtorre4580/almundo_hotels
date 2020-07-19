@@ -1,8 +1,8 @@
-# Challenge Almundo Frontend Developer
+# Almundo Hotels
 
 # Frontend
 
-App en React
+App React
 
   # Devtools
 
@@ -28,8 +28,6 @@ App en React
     <img src ="swagger.png" />
   </div>
   
-Backend en Node.js
+Backend Node.js
 
-Se encuentran los readme de cada proyecto.
-
-Autor : https://www.linkedin.com/in/mtorre4580/
+Author : https://www.linkedin.com/in/mtorre4580/
